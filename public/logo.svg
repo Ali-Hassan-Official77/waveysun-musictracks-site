@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bg" cx="35%" cy="25%" r="85%">
+      <stop offset="0" stop-color="#182337"/>
+      <stop offset=".55" stop-color="#0A101D"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </radialGradient>
+
+    <linearGradient id="ring" x1="90" y1="70" x2="425" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFEBC9"/>
+      <stop offset=".45" stop-color="#FF9B5A"/>
+      <stop offset="1" stop-color="#D95D43"/>
+    </linearGradient>
+
+    <linearGradient id="wave" x1="145" y1="180" x2="370" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4DC"/>
+      <stop offset=".5" stop-color="#FFB16D"/>
+      <stop offset="1" stop-color="#F06C49"/>
+    </linearGradient>
+
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FFD19A"/>
+      <stop offset=".45" stop-color="#FF8A51"/>
+      <stop offset="1" stop-color="#E15B43" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="circle">
+      <circle cx="256" cy="256" r="220"/>
+    </clipPath>
+  </defs>
+
+  <!-- Round premium base -->
+  <circle cx="256" cy="256" r="232" fill="#02050A"/>
+  <circle cx="256" cy="256" r="220" fill="url(#bg)"/>
+
+  <!-- Ambient sunset -->
+  <g clip-path="url(#circle)">
+    <circle cx="365" cy="145" r="125" fill="url(#sun)" opacity=".7"/>
+    <circle cx="365" cy="145" r="34" fill="#FF9A59" opacity=".9" filter="url(#glow)"/>
+
+    <!-- subtle horizon -->
+    <path d="M80 205 C155 178 200 202 256 188 C315 173 365 195 445 166 L445 250 L80 250Z"
+          fill="#121A2A" opacity=".75"/>
+
+    <!-- music wave -->
+    <path d="M50 282 C105 245 135 232 180 262 C220 289 247 319 294 294 C340 269 366 244 420 275 C445 289 462 294 480 288"
+          stroke="#4F8DFF" stroke-opacity=".35" stroke-width="4" fill="none"/>
+
+    <path d="M45 270 C105 235 135 218 181 250 C223 280 247 309 294 282 C341 255 370 230 422 263 C445 278 462 282 485 274"
+          stroke="url(#wave)" stroke-width="5" fill="none" filter="url(#glow)"/>
+
+    <path d="M45 292 C106 258 140 248 181 275 C220 302 250 328 298 304 C345 280 372 257 424 286 C448 299 465 304 486 296"
+          stroke="#6D9DFF" stroke-opacity=".22" stroke-width="2" fill="none"/>
+
+    <!-- waveform mark -->
+    <g transform="translate(256 238)" filter="url(#glow)">
+      <rect x="-54" y="-16" width="12" height="32" rx="6" fill="#FFEFD4"/>
+      <rect x="-31" y="-32" width="12" height="64" rx="6" fill="#FFC184"/>
+      <rect x="-8" y="-48" width="12" height="96" rx="6" fill="#FFF7E7"/>
+      <rect x="15" y="-29" width="12" height="58" rx="6" fill="#F5A36F"/>
+      <rect x="38" y="-15" width="12" height="30" rx="6" fill="#F2764B"/>
+    </g>
+
+    <!-- small vinyl accent -->
+    <circle cx="125" cy="400" r="86" fill="#03050A" opacity=".72"/>
+    <circle cx="125" cy="400" r="70" fill="none" stroke="#B65346" stroke-opacity=".28" stroke-width="7"/>
+    <circle cx="125" cy="400" r="36" fill="none" stroke="#222735" stroke-width="2"/>
+  </g>
+
+  <!-- Outer premium ring -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#18202F" stroke-width="4"/>
+  <circle cx="256" cy="256" r="228" fill="none" stroke="url(#ring)" stroke-width="3" opacity=".85"/>
+
+  <!-- Tiny highlight -->
+  <path d="M116 101 A220 220 0 0 1 230 40" stroke="#FFF4DF" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+</svg>
