@@ -855,8 +855,8 @@ export default function MusicApp() {
 
             <p>Independent music discovery with a premium listening experience, built for desktop and mobile.</p>
 
-            <a className="footer-email" href="mailto:hello@waveysun.app">
-              hello@waveysun.app
+            <a className="footer-email" href="mailto:waveysunofficial298@gmail.com">
+              waveysunofficial298@gmail.com
             </a>
           </div>
 
@@ -878,7 +878,7 @@ export default function MusicApp() {
             <div>
               <strong>Contact</strong>
               <span>WaveySun Music</span>
-              <a href="mailto:hello@waveysun.app">Email us</a>
+              <a href="mailto:waveysunofficial298@gmail.com">Email us</a>
             </div>
           </div>
 
