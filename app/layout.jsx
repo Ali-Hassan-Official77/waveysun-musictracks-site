@@ -37,7 +37,10 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>{children}</body>
+      <body>{children}
+      
+      <script src="https://cdn.zanderio.ai/widget/loader.js" data-id="wdg_0C2XWwtPhAhGhpJk75paCdDQ" defer></script>
+      </body>
     </html>
   );
 }
